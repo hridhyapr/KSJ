@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <meta
+      name="description"
+      content="Explore handcrafted gold jewellery from KS Jewellery Works. Browse timeless designs and today's store gold rates."
+    />
+    <title>KS Jewellery Works — Made to be treasured</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span>Thoughtfully crafted. Made for your forever.</span>
+      <span class="announcement-detail">Visit us for custom orders</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="KS Jewellery Works home">
+        <span class="brand-mark" aria-hidden="true">KS</span>
+        <span class="brand-copy">
+          <strong>KS JEWELLERY WORKS</strong>
+          <small>CRAFTED WITH CARE</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#collection">Collection</a>
+        <a href="#gold-rates">Gold rates</a>
+        <a href="#our-story">Our story</a>
+      </nav>
+      <a class="header-link" href="#collection">
+        Explore designs <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> A LITTLE GOLD, A LOT OF MEANING</p>
+          <h1 id="hero-title">Made to be<br /><em>treasured.</em></h1>
+          <p class="hero-description">
+            Jewellery that feels like you. Discover enduring designs, made with
+            care for life's most meaningful moments.
+          </p>
+          <a class="button button-dark" href="#collection">
+            Discover the collection <span aria-hidden="true">→</span>
+          </a>
+          <div class="hero-note">
+            <span class="note-rule"></span>
+            <span>Designed with intention. Worn with love.</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1200&q=85"
+            alt="Delicate gold jewellery styled in warm natural light"
+          />
+          <div class="hero-caption">
+            <span>THE EVERYDAY EDIT</span>
+            <span>01 — 06</span>
+          </div>
+          <span class="hero-stamp" aria-hidden="true">K<br /><i>S</i></span>
+        </div>
+        <div class="hero-index" aria-hidden="true">01 / 03</div>
+      </section>
+
+      <section class="trust-strip" aria-label="Our promise">
+        <span><i aria-hidden="true">✳</i> Made with care</span>
+        <span><i aria-hidden="true">✳</i> Designs for every day</span>
+        <span><i aria-hidden="true">✳</i> Crafted for your moments</span>
+      </section>
+
+      <section class="collection section-wrap" id="collection">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">KS JEWELLERY WORKS COLLECTION</p>
+            <h2>Gold ornaments</h2>
+          </div>
+          <p class="section-intro">
+            Explore 16 gold ornament designs, from everyday chains and earrings to
+            traditional and bridal pieces.
+            Sample designs shown; ask us about in-store pieces.
+          </p>
+        </div>
+
+        <div class="collection-toolbar">
+          <div class="category-list" role="group" aria-label="Filter by category">
+            <button class="category-chip active" type="button" data-category="All">All pieces</button>
+            <button class="category-chip" type="button" data-category="Necklaces">Necklaces</button>
+            <button class="category-chip" type="button" data-category="Chains">Chains</button>
+            <button class="category-chip" type="button" data-category="Earrings">Earrings</button>
+            <button class="category-chip" type="button" data-category="Rings">Rings</button>
+            <button class="category-chip" type="button" data-category="Bangles">Bangles</button>
+            <button class="category-chip" type="button" data-category="Pendants">Pendants</button>
+            <button class="category-chip" type="button" data-category="Anklets">Anklets</button>
+            <button class="category-chip" type="button" data-category="Mangalsutra">Mangalsutra</button>
+            <button class="category-chip" type="button" data-category="Nose Pins">Nose pins</button>
+            <button class="category-chip" type="button" data-category="Kids Jewellery">Kids</button>
+            <button class="category-chip" type="button" data-category="Bridal">Bridal</button>
+          </div>
+          <label class="search-box">
+            <span class="visually-hidden">Search gold ornaments</span>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" placeholder="Find an ornament" />
+          </label>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>
+          No designs found. Try another search or category.
+        </p>
+      </section>
+
+      <section class="rate-section" id="gold-rates">
+        <div class="rate-inner">
+          <div class="rate-heading">
+            <p class="eyebrow">A CLEAR STARTING POINT</p>
+            <h2>Today's gold rates</h2>
+            <p>Store rates per gram. Final jewellery price may include making charges and applicable taxes.</p>
+          </div>
+          <div class="rate-board">
+            <div class="rate-board-top">
+              <span class="rate-status"><span class="status-dot"></span> STORE RATE</span>
+              <button class="text-button" id="edit-rates-button" type="button">Update rates <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="rate-values" id="rate-values"></div>
+            <p class="rate-updated" id="rate-updated"></p>
+          </div>
+          <p class="rate-disclaimer">
+            Rates are maintained by the store and are not a live market feed.
+            Please confirm today's price with us before placing an order.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-section section-wrap" id="our-story">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85"
+            alt="A close-up of carefully crafted gold jewellery"
+            loading="lazy"
+          />
+          <span class="story-image-label">THE KS DIFFERENCE</span>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">A PIECE OF YOUR STORY</p>
+          <h2>Some things are<br />worth keeping close.</h2>
+          <p>
+            The best jewellery doesn't just complete a look. It holds a memory,
+            marks a moment, and becomes part of your story. At KS Jewellery
+            Works, we bring that thought to every piece we make.
+          </p>
+          <a class="underlined-link" href="#collection">Find a piece to call your own <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="KS Jewellery Works home">
+        <span class="brand-mark" aria-hidden="true">KS</span>
+        <span class="brand-copy">
+          <strong>KS JEWELLERY WORKS</strong>
+          <small>CRAFTED WITH CARE</small>
+        </span>
+      </a>
+      <span>Made to be treasured. © <span id="current-year"></span> KS Jewellery Works</span>
+      <a href="#gold-rates">Today's gold rates ↑</a>
+    </footer>
+
+    <dialog class="design-dialog" id="design-dialog" aria-labelledby="design-title">
+      <button class="dialog-close" type="button" aria-label="Close design details">×</button>
+      <img class="dialog-image" id="dialog-image" src="" alt="" />
+      <div class="dialog-copy">
+        <p class="eyebrow" id="dialog-category"></p>
+        <h2 id="design-title"></h2>
+        <p id="dialog-description"></p>
+        <p class="dialog-note">Made with care. Ask us about this design and custom options.</p>
+      </div>
+    </dialog>
+
+    <dialog class="rate-dialog" id="rate-dialog" aria-labelledby="rate-dialog-title">
+      <form id="rate-form">
+        <button class="dialog-close" id="close-rate-dialog" type="button" aria-label="Close rate editor">×</button>
+        <p class="eyebrow">STORE SETTINGS</p>
+        <h2 id="rate-dialog-title">Update today's rates</h2>
+        <p class="rate-form-intro">Enter your store's current price per gram. Rates are saved in this browser.</p>
+        <label class="rate-field">
+          <span>24K gold <small>per gram</small></span>
+          <span class="currency-input"><b>₹</b><input name="24K" type="number" min="1" step="0.01" required /></span>
+        </label>
+        <label class="rate-field">
+          <span>22K gold <small>per gram</small></span>
+          <span class="currency-input"><b>₹</b><input name="22K" type="number" min="1" step="0.01" required /></span>
+        </label>
+        <label class="rate-field">
+          <span>18K gold <small>per gram</small></span>
+          <span class="currency-input"><b>₹</b><input name="18K" type="number" min="1" step="0.01" required /></span>
+        </label>
+        <button class="button button-dark save-rates-button" type="submit">Save today's rates</button>
+      </form>
+    </dialog>
+  </body>
+</html>
